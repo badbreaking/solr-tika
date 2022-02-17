@@ -1,0 +1,30 @@
+ahoyapi: v2
+commands:
+
+  up:
+    usage: Start the docker containers.
+    cmd: |
+      if [ ! -d "solrdata" ]; then
+        mkdir solrdata
+      fi
+      docker-compose up -d
+  down:
+    usage: Stop the docker containers.
+    cmd: |
+      docker-compose down
+
+  reboot:
+    usage: Stop and start the containers.
+    cmd: |
+      ahoy down && ahoy up
+
+  logs:
+    usage: Check the docker container logs.
+    cmd: |
+      docker-compose logs -f
+
+  sh:
+    usage: Start a shell on the web container.
+    cmd: |
+      docker-compose exec $@ bash
+
