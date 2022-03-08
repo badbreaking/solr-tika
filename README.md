@@ -26,7 +26,10 @@ Just go to the Query page and execute
 *.* query. 
 ```
 The indexed pdf document doesn't have a full content from the document. In order to have it you need to change
-the _text_ field:
+the
+```
+_text_ field:
+```
 
 ```
 curl -X POST -H 'Content-type:application/json' --data-binary '{
