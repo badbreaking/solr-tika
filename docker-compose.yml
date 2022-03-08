@@ -1,18 +1,15 @@
-version: '2'
+version: '3'
 services:
   solr:
     image: solr:8
     ports:
-      - 8983:8983
+     - "8983:8983"
     volumes:
-      - solrdata:/opt/solr/server/solr
-      - ${PWD}/badbreaking:/opt/solr/server/solr/configsets/badbreaking # hack default to use our config
+      - data:/var/solr
+      - ${PWD}/conf:/opt/solr/server/solr/configsets/badbreaking/conf
     entrypoint:
-      - docker-entrypoint.sh
-      - solr-precreate # run precreate to create our core with our mounted configset
-#      - fut_solr
-
+      - bash
+      - "-c"
+      - "precreate-core testcore1 /opt/solr/server/solr/configsets/badbreaking; precreate-core testcore2 /opt/solr/server/solr/configsets/badbreaking; exec solr -f"
 volumes:
-  solrdata:
-
-
+  data:
