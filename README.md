@@ -21,5 +21,21 @@ You will not see any notifications of success/unsuccess so you will have to go t
 
 How to check if the document was indexed.
 
-Just go to the Query page and execute *.* query. 
+Just go to the Query page and execute 
+```
+*.* query. 
+```
+The indexed pdf document doesn't have a full content from the document. In order to have it you need to change
+the _text_ field:
 
+```
+curl -X POST -H 'Content-type:application/json' --data-binary '{
+ "replace-field" : {
+ "name":"_text_",
+ "type":"text_general",
+ "indexed":"true",
+ "stored":"true",
+ "multiValued":"true"
+ }
+}' http://localhost:8983/solr/testcore1/schema
+```
