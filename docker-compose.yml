@@ -11,5 +11,15 @@ services:
       - bash
       - "-c"
       - "precreate-core testcore1 /opt/solr/server/solr/configsets/badbreaking; precreate-core testcore2 /opt/solr/server/solr/configsets/badbreaking; exec solr -f"
+  neo4j:
+    image: neo4j:latest
+    ports:
+      - "7474:7474"
+      - "7687:7687"
+    environment:
+      NEO4J_AUTH: "none"
+    volumes:
+      - neo4jdata:/data
 volumes:
   data:
+  neo4jdata:

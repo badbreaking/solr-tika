@@ -23,3 +23,19 @@ How to check if the document was indexed.
 
 Just go to the Query page and execute *.* query. 
 
+
+# Neo4j
+
+How to create a graph for learning and playing with:
+
+1) Open the database management interface: http://localhost:7474/
+
+2) The authentication is disabled so you just click: connect
+
+3) In the Try "Neo4jwith live data" block click on: Open guide
+
+4) In the "Movie Graph Guide: panel click on: next
+
+5) In the "Create" block click on "Click this code block and bring it into the Editor:"
+
+After these steps you will see the Movie graph fully created.
