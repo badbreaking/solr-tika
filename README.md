@@ -55,8 +55,8 @@ How to create a graph for learning and playing with:
 
 3) In the Try "Neo4jwith live data" block click on: Open guide
 
-4) In the "Movie Graph Guide: panel click on: next
+4) In the "Movie Graph Guide" panel click on: next
 
-5) In the "Create" block click on "Click this code block and bring it into the Editor:"
+5) In the "Create" block click on: "Click this code block and bring it into the Editor:"
 
 After these steps you will see the Movie graph fully created.
