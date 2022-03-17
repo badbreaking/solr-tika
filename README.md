@@ -53,7 +53,7 @@ How to create a graph for learning and playing with:
 
 2) The authentication is disabled so you just click: connect
 
-3) In the Try "Neo4jwith live data" block click on: Open guide
+3) In the "Try Neo4j with live data" block click on: Open guide
 
 4) In the "Movie Graph Guide" panel click on: next
 
